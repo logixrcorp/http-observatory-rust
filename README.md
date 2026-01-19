@@ -16,10 +16,10 @@ It is split into three projects:
 In addition to standard HTTP security header analysis, this Rust port introduces **Advanced "Vibe Coding" Detection** to identify risks common in modern, AI-assisted development:
 
 *   **🛡️ Core Security Headers**: CSP, HSTS, SRI, X-Content-Type-Options, etc.
-*   **🤖 AI "Slop" Detection**: Identifies unreviewed AI-generated code artifacts and placeholders.
+*   **🤖 AI "Slop" Detection**: Identifies unreviewed AI-generated code artifacts and placeholders. (beta)
 *   **🔑 Secrets Scanner**: Detects hardcoded API keys (OpenAI, AWS, etc.) and credentials in client code.
-*   **🔌 Direct DB & Backend Leaks**: Flags client-side database connections (`postgres://`) and server imports (`require('mongoose')`).
-*   **⚡ Supabase Audit**: Actively checks for exposed Supabase credentials and disabled Row-Level Security (RLS).
+*   **🔌 Direct DB & Backend Leaks**: Flags client-side database connections (`postgres://`) and server imports (`require('mongoose')`).  (beta)
+*   **⚡ Supabase Audit**: Actively checks for exposed Supabase credentials and disabled Row-Level Security (RLS).  (beta)
 *   **☁️ Cloudflare & Edge**: Detects WAF/Edge protection presence.
 *   **🚧 Broken Components**: Finds broken links (localhost) and unrendered template syntax.
 
@@ -86,7 +86,7 @@ $ docker run -it httpobs-rust
 ## Authors
 
 * April King (Original Python Implementation)
-* Rust Port Team
+* Ehren Schlueter (Rust Port Implementation)
 
 ## License
 
