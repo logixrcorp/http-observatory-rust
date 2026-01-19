@@ -21,6 +21,16 @@ cargo build --release
 
 # Run a scan
 cargo run --release -- --url https://example.com --output report.md --active
+
+# Run EXE
+# Scans the headers and TLS of a website and outputs them into a Markdown file named Report.md.
+httpobs-rust.exe -u https://example.com
+
+# Scans the headers and TLS of a website and outputs them into a Markdown file named Example.md
+httpobs-rust.exe -u https://example.com -o Example.md
+
+# Includes Basic check on XSS and SQLi checks (beta)
+httpobs-rust.exe -u https://example.com -o Example.md -a
 ```
 
 ## Options
@@ -30,3 +40,4 @@ cargo run --release -- --url https://example.com --output report.md --active
 
 ## License
 Mozilla Public License 2.0
+
