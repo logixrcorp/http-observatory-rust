@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  httpobs:
+    build: .
+    image: httpobs-rust
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgres://httpobs:password@postgres/httpobs
+      - RUST_LOG=info
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=httpobs
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=httpobs
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
