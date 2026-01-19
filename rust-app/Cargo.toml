@@ -1,0 +1,30 @@
+[package]
+name = "httpobs-rust"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.28", features = ["full"] }
+axum = "0.6"
+sqlx = { version = "0.7", default-features = false, features = ["postgres", "runtime-tokio-native-tls", "macros", "chrono", "json", "uuid"] }
+reqwest = { version = "0.11", default-features = false, features = ["json", "native-tls"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+anyhow = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+log = "0.4"
+env_logger = "0.10"
+dotenvy = "0.15"
+strum = { version = "0.25", features = ["derive"] }
+scraper = "0.17"
+url = "2.4"
+clap = { version = "4.4", features = ["derive"] }
+tower-http = { version = "0.4", features = ["cors", "set-header"] }
+cookie = "0.17"
+publicsuffix = "2.2"
+regex = "1.12.2"
+
+
+
+
