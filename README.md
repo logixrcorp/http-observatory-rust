@@ -81,6 +81,8 @@ Build and run the containerized scanner:
 ```bash
 $ docker build -t httpobs-rust .
 $ docker run -it httpobs-rust
+
+$ docker run -it httpobs-rust httpobs-rust scan google.com
 ```
 
 ## Authors
@@ -91,3 +93,4 @@ $ docker run -it httpobs-rust
 ## License
 
 * Mozilla Public License Version 2.0
+
